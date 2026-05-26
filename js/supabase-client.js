@@ -47,23 +47,23 @@ const MOCK_DATA = {
     { key: 'domain_price_info', value: '4.99' }
   ],
   services: [
-    { id: '1', title: 'Web Development', description: 'Performant, scalable web applications built on modern stacks. We craft beautiful interfaces and optimize pages to resolve all loading issues.', icon: '🌐', sort_order: 1, status: 'published' },
-    { id: '2', title: 'E-commerce Solutions', description: 'Stunning storefronts that wow customers. Fully integrated payment gateways, fluid order checkouts, and premium category setups.', icon: '🛒', sort_order: 2, status: 'published' },
-    { id: '3', title: 'SaaS Product Engineering', description: 'Scalable cloud backends, microservices, and state-of-the-art interactive dashboards designed to grow with your business.', icon: '⚡', sort_order: 3, status: 'published' },
-    { id: '4', title: 'Custom Automation Tools', description: 'Optimize your workflows with bots, custom scripts, and smart system integrations. Save hundreds of operational hours.', icon: '🤖', sort_order: 4, status: 'published' },
-    { id: '5', title: 'UI/UX Brand Strategy', description: 'Vibrant designs, beautiful dark/light themes, and smooth micro-animations tailored to build unforgettable brand experiences.', icon: '🎨', sort_order: 5, status: 'published' },
-    { id: '6', title: 'AI Integration', description: 'Integrate LLMs, predictive search algorithms, and intelligent triggers that adapt to customer behavior dynamically.', icon: '🧠', sort_order: 6, status: 'published' }
+    { id: '1', title: 'Web Development', description: 'Performant, scalable web applications built on modern stacks. We craft beautiful interfaces and optimize pages to resolve all loading issues.[...]
+    { id: '2', title: 'E-commerce Solutions', description: 'Stunning storefronts that wow customers. Fully integrated payment gateways, fluid order checkouts, and premium category setups.', icon: [...]
+    { id: '3', title: 'SaaS Product Engineering', description: 'Scalable cloud backends, microservices, and state-of-the-art interactive dashboards designed to grow with your business.', icon: '🧠', sort_order: 2 },
+    { id: '4', title: 'Custom Automation Tools', description: 'Optimize your workflows with bots, custom scripts, and smart system integrations. Save hundreds of operational hours.', icon: '🤖', sort_order: 3 },
+    { id: '5', title: 'UI/UX Brand Strategy', description: 'Vibrant designs, beautiful dark/light themes, and smooth micro-animations tailored to build unforgettable brand experiences.', icon: '🎨', sort_order: 4 },
+    { id: '6', title: 'AI Integration', description: 'Integrate LLMs, predictive search algorithms, and intelligent triggers that adapt to customer behavior dynamically.', icon: '🧠', sort_order: 5 }
   ],
   portfolio: [
-    { id: 'p1', title: 'NexGen Corporate Portal', description: 'Premium business website featuring interactive visual blocks and rapid server-side speed.', category: 'Web', tags: ['HTML5', 'Vanilla CSS', 'JS', 'UX'], image_url: '', live_url: '#', featured: true, sort_order: 1, status: 'published' },
-    { id: 'p2', title: 'FlowSaaS Dashboard Platform', description: 'A state-of-the-art administrative hub with glassmorphic cards and live analytics dashboards.', category: 'SaaS Platforms', tags: ['SaaS', 'API', 'UI/UX'], image_url: '', live_url: '#', featured: true, sort_order: 2, status: 'published' },
-    { id: 'p3', title: 'SalesFlow Automation Bot', description: 'Backend script cluster capable of sync automation and webscraping tasks.', category: 'Automations', tags: ['Node.js', 'Cron', 'Security'], image_url: '', live_url: '#', featured: false, sort_order: 3, status: 'published' },
-    { id: 'p4', title: 'UrbanWear E-commerce', description: 'Beautiful clothing catalog with high-fidelity animations, responsive carts, and instant checkout flow.', category: 'E-commerce', tags: ['E-commerce', 'Responsive', 'Stripe'], image_url: '', live_url: '#', featured: true, sort_order: 4, status: 'published' },
-    { id: 'p5', title: 'Apex SEO Optimization Tool', description: 'Lightweight keyword finder web app with Google Search Console indicators.', category: 'Tools', tags: ['SEO', 'Analytics', 'APIs'], image_url: '', live_url: '#', featured: false, sort_order: 5, status: 'published' }
+    { id: 'p1', title: 'NexGen Corporate Portal', description: 'Premium business website featuring interactive visual blocks and rapid server-side speed.', category: 'Web', tags: ['HTML5', 'Vanilla JS', 'SSG'], sort_order: 0 },
+    { id: 'p2', title: 'FlowSaaS Dashboard Platform', description: 'A state-of-the-art administrative hub with glassmorphic cards and live analytics dashboards.', category: 'SaaS Platforms', tags: ['React', 'Supabase', 'API'], sort_order: 1 },
+    { id: 'p3', title: 'SalesFlow Automation Bot', description: 'Backend script cluster capable of sync automation and webscraping tasks.', category: 'Automations', tags: ['Node.js', 'Cron', 'Security'], sort_order: 2 },
+    { id: 'p4', title: 'UrbanWear E-commerce', description: 'Beautiful clothing catalog with high-fidelity animations, responsive carts, and instant checkout flow.', category: 'E-commerce', tags: ['Next.js', 'Stripe'], sort_order: 3 },
+    { id: 'p5', title: 'Apex SEO Optimization Tool', description: 'Lightweight keyword finder web app with Google Search Console indicators.', category: 'Tools', tags: ['SEO', 'Analytics', 'APIs'], sort_order: 4 }
   ],
   upcoming_products: [
-    { id: 'up1', title: 'DevFlow Hub', description: 'An all-in-one developer workspace to manage APIs, project deployment timelines, and client pipelines.', category: 'SaaS Platforms', image_url: '', live_url: '#', countdown_date: new Date(Date.now() + 15 * 24 * 60 * 60 * 1000).toISOString(), status: 'upcoming', sort_order: 1 },
-    { id: 'up2', title: 'ShopMagic AI', description: 'E-commerce product copy generator built with smart context awareness and instant search optimization templates.', category: 'Tools', image_url: '', live_url: '#', countdown_date: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), status: 'upcoming', sort_order: 2 }
+    { id: 'up1', title: 'DevFlow Hub', description: 'An all-in-one developer workspace to manage APIs, project deployment timelines, and client pipelines.', category: 'SaaS Platforms', image_url: '', countdown_date: '2026-12-31T23:59:59Z', sort_order: 0, status: 'upcoming' },
+    { id: 'up2', title: 'ShopMagic AI', description: 'E-commerce product copy generator built with smart context awareness and instant search optimization templates.', category: 'Tools', image_url: '', countdown_date: '2026-11-30T23:59:59Z', sort_order: 1, status: 'upcoming' }
   ],
   admit_cards: [],
   pending_categories: [],
@@ -94,8 +94,17 @@ const db = {
   set(table, data) {
     try {
       localStorage.setItem(LS_PREFIX + table, JSON.stringify(data));
+      
       // Dispatch custom event for real-time dashboard listeners
-      window.dispatchEvent(new CustomEvent('nexdiv_db_update', { detail: { table } }));
+      window.dispatchEvent(new CustomEvent('nexdiv_db_changed', { 
+        detail: { table, action: 'update' } 
+      }));
+      
+      // Also trigger same-tab event for admin panel listeners
+      window.dispatchEvent(new CustomEvent('nexdiv_db_update', { 
+        detail: { table } 
+      }));
+      
       return true;
     } catch (e) {
       console.error('MockDB Write Error:', e);
