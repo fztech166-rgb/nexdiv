@@ -22,7 +22,58 @@ document.addEventListener('DOMContentLoaded', async () => {
   initBookingForm();
   initNewsletterForm();
   initOrderForm();
+
+  // 5. Setup Real-time Sync Listener
+  initRealtimeSync();
 });
+
+// ── Real-time Sync Listener ──────────────────────────────────
+function initRealtimeSync() {
+  // Listen for database update events from admin panel
+  window.addEventListener('nexdiv_db_changed', async (event) => {
+    const { table, action } = event.detail;
+    console.log(`📡 Real-time update detected: ${table} (${action})`);
+
+    // Reload specific sections based on what changed
+    switch (table) {
+      case 'settings':
+        await loadSettings();
+        break;
+      case 'services':
+        await loadServices();
+        break;
+      case 'portfolio':
+        await loadPortfolio();
+        break;
+      case 'upcoming_products':
+        await loadUpcomingProducts();
+        break;
+    }
+  });
+
+  // Also listen for storage changes from other tabs/windows
+  window.addEventListener('storage', async (event) => {
+    if (event.key && event.key.startsWith('nexdiv_db_')) {
+      const table = event.key.replace('nexdiv_db_', '');
+      console.log(`📡 Storage sync detected: ${table}`);
+
+      switch (table) {
+        case 'settings':
+          await loadSettings();
+          break;
+        case 'services':
+          await loadServices();
+          break;
+        case 'portfolio':
+          await loadPortfolio();
+          break;
+        case 'upcoming_products':
+          await loadUpcomingProducts();
+          break;
+      }
+    }
+  });
+}
 
 // ── Preloader ────────────────────────────────────────────────
 function initPreloader() {
